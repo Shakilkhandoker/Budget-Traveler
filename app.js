@@ -25,20 +25,18 @@ for (const btn of allBtn) {
     li.appendChild(p);
     li.appendChild(p2);
 
+    const budget = document.getElementById("budget").innerText;
+    const convertedBudget = parseInt(budget);
 
-    const budget=document.getElementById("budget").innerText;
-    const convertedBudget=parseInt(budget)
-    
-    
-    // todo-budget will not less then 900.if the cost is less the 900 ,show an alert and stop 
-    if(convertedBudget-parseInt(price)<0){
-      alert("Budget is less than 900")
+    // todo-budget will not less then 900.if the cost is less the 900 ,show an alert and stop
+    if (convertedBudget - parseInt(price) < 0) {
+      alert("Budget is less than 900");
       return;
     }
-    document.getElementById("budget").innerText = convertedBudget-parseInt(price)
-    
-    showSelected.appendChild(li);
+    document.getElementById("budget").innerText =
+      convertedBudget - parseInt(price);
 
+    showSelected.appendChild(li);
 
     // // todo-count the selected price and show it in total cost area
     // const totalCost = document.getElementById("total-cost").innerText;
@@ -86,14 +84,14 @@ function grandTotalCost(category) {
     const totalCost = document.getElementById("total-cost").innerText;
     const cost = parseInt(totalCost);
     const sum2 = cost + parseInt(500);
-    document.getElementById("grand-total").innerText = sum2;  
+    document.getElementById("grand-total").innerText = sum2;
   }
 
   // todo-when no button is clicked, then show the grand total cost by the total cost
-  else{
+  else {
     const totalCost = document.getElementById("total-cost").innerText;
     const cost = parseInt(totalCost);
-    document.getElementById("grand-total").innerText = cost
+    document.getElementById("grand-total").innerText = cost;
   }
 
   const totalCost = document.getElementById("total-cost").innerText;
